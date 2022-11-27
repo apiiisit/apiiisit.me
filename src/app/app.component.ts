@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  width!: string;
+  height!: string;
+
+  constructor() {
+    this.width = '240';
+    this.height = '160';
+  }
 }
