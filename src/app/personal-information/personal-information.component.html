@@ -1,0 +1,49 @@
+<div class="display">
+    <div class="title">
+        <div class="name">
+            <span>{{data.name}} <span style="font-weight: bold;">{{data.lastname}}</span></span>
+        </div>
+        <span>{{data.work}}</span>
+    </div>
+
+    <div class="contact">
+        <div class="content">
+            <img src="assets/icons/mail.svg" alt="mail" height="28">
+            <a href="mailto:{{data.email}}">{{data.email}}</a>
+        </div>
+        <div class="content">
+            <img src="assets/icons/github.svg" alt="github" height="28">
+            <a href="{{data.github}}" target="_blank">{{data.github?.substring(8)}}</a>
+        </div>
+    </div>
+
+    <hr>
+    
+    <div class="info" *ngFor="let section of cv">
+        
+        <span>{{section}}</span>
+        <div class="item" *ngFor="let items of data.cv[section]">
+            <span>{{items.duration}}</span>
+            <ul>
+                <li *ngFor="let ac of items.activity">
+                    <span *ngIf="ac.bold else content">{{ac.title}}</span>
+                    <ng-template #content>{{ac.title}}</ng-template>
+                    <br *ngIf="ac.subtitle">
+                    <small *ngIf="ac.subtitle">
+                        {{ac.subtitle}}
+                        <br *ngIf="ac.url">
+                        <a *ngIf="ac.url" href="{{ac.url}}" target="_blank">View</a>
+                    </small>
+                </li>
+            </ul>
+        </div>
+
+        <hr>
+
+    </div>
+
+    <div class="footer">
+        <span>&copy; {{year}} apiiisit.me</span>
+    </div>
+
+</div>

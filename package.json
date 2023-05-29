@@ -1,10 +1,14 @@
 {
   "name": "apiiisit.me",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": {
+    "name": "apiiisit",
+    "email": "apiiisit@outlook.com"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href ./",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

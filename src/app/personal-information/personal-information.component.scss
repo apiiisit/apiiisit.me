@@ -1,0 +1,34 @@
+.name {
+    font-size: 25px;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a {
+    text-decoration: none;
+    color: #3b82f6;
+}
+
+.contact .content {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-right: 1em;
+}
+
+.info span {
+    font-weight: bold;
+}
+
+.info .item {
+    margin-left: 2em;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
