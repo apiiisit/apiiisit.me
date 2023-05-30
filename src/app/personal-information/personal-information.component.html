@@ -43,7 +43,10 @@
     </div>
 
     <div class="footer">
-        <span>&copy; {{year}} apiiisit.me</span>
+        <span>
+            &copy; {{year}} apiiisit.me
+            <span *ngIf="data.update">Update {{data.update | date:'medium'}}</span>
+        </span>
     </div>
 
 </div>
